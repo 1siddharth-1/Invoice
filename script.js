@@ -113,7 +113,7 @@ function updateNumber(e) {
 
 function updateInvoice() {
 	var total = 0;
-	var cells, price, total, a, i;
+	var cells, price, total, a, i, taxPrice;
 
 	// update inventory cells
 	// ======================
@@ -130,6 +130,10 @@ function updateInvoice() {
 
 		// set row total
 		cells[4].innerHTML = price;
+
+		// tax price 
+		taxPrice = parseFloatHTML(cells[4]) / 1.18;
+		cells[7].innerHTML = taxPrice;
 	}
 
 	// update balance cells
