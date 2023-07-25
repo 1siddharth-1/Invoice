@@ -70,12 +70,12 @@ function generateTableRow() {
 
 	emptyColumn.innerHTML = '<td><a class="cut">-</a><span contenteditable></span></td>' +
 		'<td><span contenteditable></span></td>' +
-		'<td><span data-prefix>$</span><span contenteditable></span></td>' +
+		'<td><span data-prefix>₹</span><span contenteditable></span></td>' +
 		'<td><span contenteditable></span></td>' +
-		'<td><span data-prefix>$</span><span></span></td>' +
-		'<td><span data-prefix>&#8377;</span><span>149.49</span><br><span>(9.0%)</span></td>' +
-		'<td><span data-prefix>&#8377;</span><span>149.49</span><br><span>(9.0%)</span></td>' +
-		'<td><span data-prefix>$</span><span></span></td>';
+		'<td><span data-prefix>₹</span><span></span></td>' +
+		'<td><span data-prefix>&#8377;</span><span></span></td>' +
+		'<td><span data-prefix>&#8377;</span><span></span></td>' +
+		'<td><span data-prefix>₹</span><span></span></td>';
 	return emptyColumn;
 }
 
@@ -113,7 +113,7 @@ function updateNumber(e) {
 
 function updateInvoice() {
 	var total = 0;
-	var cells, price, total, a, i, taxPrice;
+	var cells, price, total, a, i, taxPrice, gst;
 
 	// update inventory cells
 	// ======================
@@ -134,6 +134,11 @@ function updateInvoice() {
 		// tax price 
 		taxPrice = parseFloatHTML(cells[4]) / 1.18;
 		cells[7].innerHTML = taxPrice;
+
+		//gst calc
+		gst = (price - taxPrice) / 2;
+		cells[5].innerHTML = gst;
+		cells[6].innerHTML = gst;
 	}
 
 	// update balance cells
