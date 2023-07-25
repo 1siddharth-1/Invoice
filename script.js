@@ -113,7 +113,11 @@ function updateNumber(e) {
 
 function updateInvoice() {
 	var total = 0;
-	var cells, price, total, a, i, taxPrice, gst, totalCgstPrice, totalSgstPrice;
+	var totalCgstPrice = 0;
+	var totalSgstPrice = 0;
+	var totalTaxPrice  = 0;
+	var totalProductQuantity  = 0;
+	var cells, price, total, a, i, taxPrice, gst, totalCgstPrice, totalSgstPrice, totalTaxPrice, totalProductQuantity;
 
 	// update inventory cells
 	// ======================
@@ -140,10 +144,15 @@ function updateInvoice() {
 		cells[5].innerHTML = gst;
 		cells[6].innerHTML = gst;
 
-		// add cgst, sgst to totalCgst, total Sgst
-		//totalCgstPrice += gst;
-		//console.log(totalCgstPrice);
-		//totalSgstPrice += gst;
+		//add cgst, sgst to totalCgst, total Sgst
+		totalCgstPrice += (+cells[5].innerHTML);
+		totalSgstPrice += (+cells[6].innerHTML);
+
+		// add taxPrice to totalTaxPrice
+		totalTaxPrice += parseFloatHTML(cells[7]);
+
+		//add total quantity
+		totalProductQuantity += parseFloatHTML(cells[3]);
 	}
 
 
@@ -152,12 +161,20 @@ function updateInvoice() {
 	totalPrice.innerHTML = total;
 
 	//total CGST
-	//let totalCgst = document.querySelector('.totalCsgt');
-	//totalCgst.innerHTML = totalCgstPrice;
+	let totalCgst = document.querySelector('.totalCsgt');
+	totalCgst.innerHTML = totalCgstPrice;
 
 	//total SGST
-	//let totalSgst = document.querySelector('.totalSsgt');
-	//totalSgst.innerHTML = totalSgstPrice;
+	let totalSgst = document.querySelector('.totalSgst');
+	totalSgst.innerHTML = totalSgstPrice;
+
+	//total body update
+	let totalTaxAmount = document.querySelector('.totalTaxAmount');
+	totalTaxAmount.innerHTML = totalTaxPrice;
+
+	//total quantity update
+	let totalQuantity = document.querySelector('.totalQuantity');
+	totalQuantity.innerHTML = totalProductQuantity;
 
 
 	// update balance cells
