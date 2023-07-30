@@ -246,6 +246,8 @@ table.meta td {
 table.inventory {
   clear: both;
   width: 100%;
+  border:solid #000 !important;
+  border-width:1px 0 0 1px !important;
 }
 table.inventory th {
   font-weight: bold;
@@ -253,12 +255,15 @@ table.inventory th {
   vertical-align: middle;
   border-radius: 0;
   position: unset;
+  border:solid #000 !important;
+  border-width:0 1px 1px 0 !important;
 }
 table.inventory td {
   text-align: right;
   vertical-align: middle;
   border-radius: 0;
-  position: unset;
+  border:solid #000 !important;
+  border-width:0 1px 1px 0 !important;
 }
 table.inventory td:nth-child(1) {
   width: 38%;
