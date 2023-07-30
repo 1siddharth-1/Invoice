@@ -175,6 +175,7 @@ article address,
 table.meta,
 table.inventory {
   margin: 0 0 3em;
+  border-collapse: collapse;
 }
 article:after {
   clear: both;
@@ -250,10 +251,14 @@ table.inventory th {
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
+  border-radius: 0;
+  position: unset;
 }
 table.inventory td {
   text-align: right;
   vertical-align: middle;
+  border-radius: 0;
+  position: unset;
 }
 table.inventory td:nth-child(1) {
   width: 38%;
