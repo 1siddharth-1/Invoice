@@ -70,6 +70,7 @@ function generateTableRow() {
 
 	emptyColumn.innerHTML = '<td><a class="cut">-</a><span contenteditable></span></td>' +
 		'<td><span contenteditable></span></td>' +
+		'<td><span contenteditable></span></td>' +
 		'<td><span data-prefix>₹</span><span contenteditable></span></td>' +
 		'<td><span contenteditable></span></td>' +
 		'<td><span data-prefix>₹</span><span></span></td>' +
@@ -127,32 +128,32 @@ function updateInvoice() {
 		cells = a[i].querySelectorAll('span:last-child');
 
 		// set price as cell[2] * cell[3]
-		price = parseFloatHTML(cells[2]) * parseFloatHTML(cells[3]);
+		price = parseFloatHTML(cells[3]) * parseFloatHTML(cells[4]);
 
 		// add price to total
 		total += price;
 
 		// set row total
-		cells[4].innerHTML = price;
+		cells[5].innerHTML = price;
 
 		// tax price 
-		taxPrice = parseFloatHTML(cells[4]) / 1.18;
-		cells[7].innerHTML = taxPrice;
+		taxPrice = parseFloatHTML(cells[5]) / 1.18;
+		cells[8].innerHTML = taxPrice;
 
 		//gst calc
 		gst = (price - taxPrice) / 2;
-		cells[5].innerHTML = gst;
 		cells[6].innerHTML = gst;
+		cells[7].innerHTML = gst;
 
 		//add cgst, sgst to totalCgst, total Sgst
-		totalCgstPrice += (+cells[5].innerHTML);
-		totalSgstPrice += (+cells[6].innerHTML);
+		totalCgstPrice += (+cells[6].innerHTML);
+		totalSgstPrice += (+cells[7].innerHTML);
 
 		// add taxPrice to totalTaxPrice
-		totalTaxPrice += parseFloatHTML(cells[7]);
+		totalTaxPrice += parseFloatHTML(cells[8]);
 
 		//add total quantity
-		totalProductQuantity += parseFloatHTML(cells[3]);
+		totalProductQuantity += parseFloatHTML(cells[4]);
 	}
 
 
