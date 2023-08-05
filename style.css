@@ -100,6 +100,7 @@ body {
   overflow-y: scroll;
   padding: 0.5in;
   width: 8.5in;
+  overflow-x: hidden;
 }
 body {
   background: #fff;
@@ -125,37 +126,42 @@ header h1 {
   margin: 0 0 1em;
   padding: 0.5em 0;
 }
-header address {
-  float: left;
+
+.address_wrap{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: 1px solid #000000;
+  margin-bottom: 4px;
+}
+
+.address_wrap .address_container{
+  width: 60%;
+  border-right: 1px solid #000000;
+}
+
+.address_wrap .address_container address.header_address_wrap {
   font-size: 75%;
   font-style: normal;
   line-height: 1.25;
-  margin: 0 1em 1em 0;
+  border-bottom: 1px solid #000000;
+  padding: 8px;
 }
-header address h2 {
+.address_wrap .address_container address.header_address_wrap h2 {
   font-size: 24px;
   font-weight: 700;
   margin: 0 0 0.25em;
 }
-header address p{
+.address_wrap .address_container address.header_address_wrap p{
   margin: 0 0 0.25em;
 }
-header address p span{
+.address_wrap .address_container address.header_address_wrap p span{
     font-size: 16px;
     font-weight: 600;
 }
-header address p span:first-child{
+.address_wrap .address_container address.header_address_wrap p span:first-child{
   display: inline-block;
   width: 100px;
-}
-header img {
-  display: block;
-  float: right;
-}
-
-header img {
-  max-width: 180px;
-  max-height: fit-content;
 }
 header input {
   cursor: pointer;
@@ -172,7 +178,6 @@ header input {
 
 article,
 article address,
-table.meta,
 table.inventory {
   margin: 0 0 3em;
   border-collapse: collapse;
@@ -197,35 +202,37 @@ article address {
   line-height: 1.25;
 }
 
-article address.buyer_detail h2{
+.address_wrap address.buyer_detail{
+  padding: 8px;
+}
+
+.address_wrap address.buyer_detail h2{
   font-size: 18px;
   font-weight: 700;
   margin: 0 0 0.25em;
 }
-article address.buyer_detail h2 span:first-child{
+.address_wrap address.buyer_detail h2 span:first-child{
   display: inline-block;
   width: 100px;
 }
-article address.buyer_detail p span:first-child{
+.address_wrap address.buyer_detail p span:first-child{
   display: inline-block;
   width: 100px;
 }
-article address.buyer_detail p{
+.address_wrap address.buyer_detail p{
   margin: 0 0 0.25em;
 }
-article address.buyer_detail p span{
+.address_wrap address.buyer_detail p span{
   font-size: 16px;
   font-weight: 600;
 }
 
 /* table meta & balance */
 
-table.meta,
 table.balance {
   float: right;
   width: 36%;
 }
-table.meta:after,
 table.balance:after {
   clear: both;
   content: "";
@@ -234,11 +241,33 @@ table.balance:after {
 
 /* table meta */
 
+table.meta{
+  width: 40%;
+}
+
 table.meta th {
   width: 60%;
+  background: unset;
+  border-style: unset;
+  border-radius: unset;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  vertical-align: middle;
+}
+
+table.meta tr:last-child th {
+  border-bottom: unset;
 }
 table.meta td {
   width: 40%;
+  border-style: unset;
+  border-radius: unset;
+  border-bottom: 1px solid #000000;
+  vertical-align: middle;
+  padding: 1.06rem 0.5rem;
+}
+table.meta tr:last-child td {
+  border-bottom: unset;
 }
 
 /* table items */
