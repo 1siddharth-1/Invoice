@@ -158,20 +158,28 @@ function updateInvoice() {
 
 
 	//total body update
-	let totalPrice = document.querySelector('.totalPrice');
-	totalPrice.innerHTML = total;
+	let totalPriceCells = document.querySelectorAll('.totalPrice');
+	totalPriceCells.forEach(ele => {
+		ele.innerHTML = total;	
+	});
 
 	//total CGST
-	let totalCgst = document.querySelector('.totalCsgt');
-	totalCgst.innerHTML = totalCgstPrice;
+	let totalCgstCells = document.querySelectorAll('.totalCsgt');
+	totalCgstCells.forEach(ele => {
+		ele.innerHTML = totalCgstPrice;
+	});
 
 	//total SGST
-	let totalSgst = document.querySelector('.totalSgst');
-	totalSgst.innerHTML = totalSgstPrice;
+	let totalSgstCells = document.querySelectorAll('.totalSgst');
+	totalSgstCells.forEach(ele => {
+		ele.innerHTML = totalSgstPrice;
+	});
 
 	//total body update
-	let totalTaxAmount = document.querySelector('.totalTaxAmount');
-	totalTaxAmount.innerHTML = totalTaxPrice;
+	let totalTaxAmountCells = document.querySelectorAll('.totalTaxAmount');
+	totalTaxAmountCells.forEach(ele => {
+		ele.innerHTML = totalTaxPrice;
+	});
 
 	//total quantity update
 	let totalQuantity = document.querySelector('.totalQuantity');

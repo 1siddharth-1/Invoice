@@ -108,6 +108,10 @@ body {
   box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
 }
 
+.main_container{
+  border: 1px solid #000000;
+}
+
 /* header */
 
 header {
@@ -131,7 +135,7 @@ header h1 {
   display: flex;
   flex-direction: row;
   width: 100%;
-  border: 1px solid #000000;
+  border-bottom: 1px solid #000000;
   margin-bottom: 4px;
 }
 
@@ -177,7 +181,8 @@ header input {
 
 article,
 article address,
-table.inventory {
+table.inventory,
+table.final_table{
   margin: 0 0 3em;
   border-collapse: collapse;
 }
@@ -270,13 +275,14 @@ table.meta tr:last-child td {
 
 /* table items */
 
-table.inventory {
+table.inventory, table.final_table {
   clear: both;
   width: 100%;
-  border:solid #000 !important;
+  border-bottom:solid #000 !important;
+  border-top:solid #000 !important;
   border-width:1px 0 0 1px !important;
 }
-table.inventory th {
+table.inventory th, table.final_table th {
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
@@ -285,7 +291,7 @@ table.inventory th {
   border:solid #000 !important;
   border-width:0 1px 1px 0 !important;
 }
-table.inventory td {
+table.inventory td , table.final_table td {
   text-align: right;
   vertical-align: middle;
   border-radius: 0;
@@ -297,22 +303,38 @@ table.inventory td:nth-child(1) {
   text-align: center;
 }
 table.inventory td:nth-child(2) {
-  width: 36%;
+  width: 40%;
   text-align: left;
 }
 table.inventory td:nth-child(3) {
   text-align: right;
-  width: 12%;
+  width: 8.28%;
 }
 table.inventory td:nth-child(4) {
   text-align: right;
-  width: 12%;
+  width: 8.28%;
 }
 table.inventory td:nth-child(5) {
   text-align: right;
-  width: 12%;
+  width: 8.28%;
 }
-table.inventory .total_body td span{
+table.inventory td:nth-child(6) {
+  text-align: right;
+  width: 8.28%;
+}
+table.inventory td:nth-child(7) {
+  text-align: right;
+  width: 8.28%;
+}
+table.inventory td:nth-child(8) {
+  text-align: right;
+  width: 8.28%;
+}
+table.inventory td:nth-child(9) {
+  text-align: right;
+  width: 8.28%;
+}
+table.inventory .total_body td span, table.final_table .total_body td span{
   font-weight: 600;
 }
 

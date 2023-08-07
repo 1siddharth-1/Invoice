@@ -11,114 +11,157 @@
 		<header>
 			<h1>Invoice</h1>
 		</header>
-		<div class="address_wrap">
-			<div class="address_container">
-				<address class="header_address_wrap">
-					<h2>Aai Ekvira Stationary</h2>
-					<p><span>Phone no.</span><span>: </span><span>8827722558</span></p>
-					<p><span>Email</span><span>: </span><span>pchitnis01@gmail.com</span></p>
-					<p><span>GSTIN</span><span>: </span><span>23BTZPC3882R1ZP</span></p>
-					<P><span>State</span><span>: </span><span>23-Madhya Pradesh</span></P>
-				</address>
-				<address class="buyer_detail">
-					<h2><span>Buyer</span><span>: </span><span contenteditable>name</span></h2>
-					<p><span>Phone no.</span><span>: </span><span contenteditable>xxxxxxxxxx</span></p>
-					<p><span>Email</span><span>: </span><span contenteditable>Email</span></p>
-					<p><span>GSTIN</span><span>: </span><span contenteditable>xxxxxxxxxxxxxxx</span></p>
-					<P><span>State</span><span>: </span><span contenteditable>Madhya Pradesh</span></P>
-				</address>
+		<div class="main_container">
+			<div class="address_wrap">
+				<div class="address_container">
+					<address class="header_address_wrap">
+						<h2>Aai Ekvira Stationary</h2>
+						<p><span>Phone no.</span><span>: </span><span>8827722558</span></p>
+						<p><span>Email</span><span>: </span><span>pchitnis01@gmail.com</span></p>
+						<p><span>GSTIN</span><span>: </span><span>23BTZPC3882R1ZP</span></p>
+						<P><span>State</span><span>: </span><span>23-Madhya Pradesh</span></P>
+					</address>
+					<address class="buyer_detail">
+						<h2><span>Buyer</span><span>: </span><span contenteditable>name</span></h2>
+						<p><span>Phone no.</span><span>: </span><span contenteditable>xxxxxxxxxx</span></p>
+						<p><span>Email</span><span>: </span><span contenteditable>Email</span></p>
+						<p><span>GSTIN</span><span>: </span><span contenteditable>xxxxxxxxxxxxxxx</span></p>
+						<P><span>State</span><span>: </span><span contenteditable>Madhya Pradesh</span></P>
+					</address>
+				</div>
+				<table class="meta">
+					<tr>
+						<th><span>Invoice No.:</span></th>
+						<td><span contenteditable>7</span></td>
+					</tr>
+					<tr>
+						<th><span>Date</span></th>
+						<td><span contenteditable>August 8, 2023</span></td>
+					</tr>
+					<tr>
+						<th><span>Supplier's Ref.</span></th>
+						<td><span contenteditable></span></td>
+					</tr>
+					<tr>
+						<th><span>Buyer's Order No.</span></th>
+						<td><span contenteditable></span></td>
+					</tr>
+					<tr>
+						<th><span>Despatch Document No.</span></th>
+						<td><span contenteditable></span></td>
+					</tr>
+					<tr>
+						<th><span>Despatched Through</span></th>
+						<td><span contenteditable></span></td>
+					</tr>
+				</table>
 			</div>
-			<table class="meta">
-				<tr>
-					<th><span>Invoice No.:</span></th>
-					<td><span contenteditable>7</span></td>
-				</tr>
-				<tr>
-					<th><span>Date</span></th>
-					<td><span contenteditable>August 8, 2023</span></td>
-				</tr>
-				<tr>
-					<th><span>Supplier's Ref.</span></th>
-					<td><span contenteditable></span></td>
-				</tr>
-				<tr>
-					<th><span>Buyer's Order No.</span></th>
-					<td><span contenteditable></span></td>
-				</tr>
-				<tr>
-					<th><span>Despatch Document No.</span></th>
-					<td><span contenteditable></span></td>
-				</tr>
-				<tr>
-					<th><span>Despatched Through</span></th>
-					<td><span contenteditable></span></td>
-				</tr>
-			</table>
+			<article>
+				<table class="inventory">
+					<thead>
+						<tr>
+							<th><span>S No</span></th>
+							<th><span>Item name</span></th>
+							<th><span>HSN/SAC</span></th>
+							<th><span>Price/unit</span></th>
+							<th><span>Quantity</span></th>
+							<th><span>Amount</span></th>
+							<th><span>CGST</span></th>
+							<th><span>SGST</span></th>
+							<th><span>Taxable amount</span></th>
+						</tr>
+					</thead>
+					<tbody class="input_body">
+						<tr>
+							<td><a class="cut">-</a><span contenteditable></span></td>
+							<td><span contenteditable></span></td>	
+							<td><span contenteditable></span></td>
+							<td><span data-prefix>&#8377;</span><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td><span data-prefix>&#8377;</span><span></span></td>
+							<td><span data-prefix>&#8377;</span><span></span></td>
+							<td><span data-prefix>&#8377;</span><span></span></td>
+							<td><span data-prefix>&#8377;</span><span></span></td>
+						</tr>
+					</tbody>
+					<tbody class="total_body">
+						<tr>
+							<td><span></span></td>
+							<td><span>Total</span></td>
+							<td><span></span></td>
+							<td><span></span></td>
+							<td><span class="totalQuantity"></span></td>
+							<td><span data-prefix>&#8377;</span><span class="totalPrice"></span></td>
+							<td><span data-prefix>&#8377;</span><span class="totalCsgt"></span></td>
+							<td><span data-prefix>&#8377;</span><span class="totalSgst"></span></td>
+							<td><span data-prefix>&#8377;</span><span class="totalTaxAmount"></span></td>
+						</tr>
+					</tbody>
+				</table>
+				<a class="add">+</a>
+				<table class="balance">
+					<tr>
+						<th><span contenteditable>Total</span></th>
+						<td><span data-prefix>&#8377;</span><span></span></td>
+					</tr>
+				</table>
+			</article>
+			<div>
+				<table class="final_table">
+					<thead>
+						<tr>
+							<th rowspan="2"><span>HSN/SAC</span></th>
+							<th rowspan="2"><span>Taxable Value</span></th>
+							<th colspan="2"><span>Central Tax</span></th>
+							<th colspan="2"><span>State Tax</span></th>
+							<th rowspan="2"><span>Total Tax Amount</span></th>
+						</tr>
+						<tr>
+							<th><span>Rate</span></th>
+							<th><span>Amount</span></th>
+							<th><span>Rate</span></th>
+							<th><span>Amount</span></th>
+						</tr>
+						<tbody>
+							<tr>
+								<td><span contenteditable></span></td>
+								<td><span data-prefix>&#8377;</span><span class="totalPrice"></span></td>
+								<td><span>9%</span></td>
+								<td><span data-prefix>&#8377;</span><span class="totalCsgt"></span></td>
+								<td><span>9%</span></td>
+								<td><span data-prefix>&#8377;</span><span class="totalSgst"></span></td>
+								<td><span data-prefix>&#8377;</span><span class="totalTaxAmount"></span></td>
+							</tr>
+						</tbody>
+						<tbody class="total_body">
+							<tr>
+								<td><span>Total</span></td>
+								<td><span data-prefix>&#8377;</span><span class="totalPrice"></span></td>
+								<td><span></span></td>
+								<td><span data-prefix>&#8377;</span><span class="totalCsgt"></span></td>
+								<td><span></span></td>
+								<td><span data-prefix>&#8377;</span><span class="totalSgst"></span></td>
+								<td><span data-prefix>&#8377;</span><span class="totalTaxAmount"></span></td>
+							</tr>
+						</tbody>
+					</thead>
+				</table>
+			</div>
+			<aside class="bank_details_section">
+				<!-- <h1><span contenteditable>Additional Notes</span></h1> -->
+				<address class="bank_details">
+					<h2>Bank Details</h2>
+					<p>AAI EKVIRA STATIONARY</p>
+					<p><span>Bank Name</span><span>: </span><span>UNION BANK</span></p>
+					<p><span>A/c.No</span><span>: </span><span>538201010050429</span></p>
+					<p><span>IFSC Code</span><span>: </span><span>UBIN0553824</span></p>
+				</address>
+				<div class="signature_section">
+					<img src="/assets/img/sign.jpeg" alt="AAI EKAVIRA STATIONARY">
+					<p>Authorised Signature</p>
+				</div>
+			</aside>
 		</div>
-		<article>
-			<table class="inventory">
-				<thead>
-					<tr>
-						<th><span>S No</span></th>
-						<th><span>Item name</span></th>
-						<th><span>HSN/SAC</span></th>
-						<th><span>Price/unit</span></th>
-						<th><span>Quantity</span></th>
-						<th><span>Amount</span></th>
-						<th><span>CGST</span></th>
-						<th><span>SGST</span></th>
-						<th><span>Taxable amount</span></th>
-					</tr>
-				</thead>
-				<tbody class="input_body">
-					<tr>
-						<td><a class="cut">-</a><span contenteditable></span></td>
-						<td><span contenteditable></span></td>	
-						<td><span contenteditable></span></td>
-						<td><span data-prefix>&#8377;</span><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td><span data-prefix>&#8377;</span><span></span></td>
-                        <td><span data-prefix>&#8377;</span><span></span></td>
-                        <td><span data-prefix>&#8377;</span><span></span></td>
-						<td><span data-prefix>&#8377;</span><span></span></td>
-					</tr>
-				</tbody>
-				<tbody class="total_body">
-					<tr>
-						<td><span></span></td>
-						<td><span>Total</span></td>
-						<td><span></span></td>
-						<td><span></span></td>
-                        <td><span class="totalQuantity"></span></td>
-                        <td><span data-prefix>&#8377;</span><span class="totalPrice"></span></td>
-						<td><span data-prefix>&#8377;</span><span class="totalCsgt"></span></td>
-						<td><span data-prefix>&#8377;</span><span class="totalSgst"></span></td>
-						<td><span data-prefix>&#8377;</span><span class="totalTaxAmount"></span></td>
-					</tr>
-				</tbody>
-			</table>
-			<a class="add">+</a>
-			<table class="balance">
-				<tr>
-					<th><span contenteditable>Total</span></th>
-					<td><span data-prefix>&#8377;</span><span></span></td>
-				</tr>
-			</table>
-		</article>
-		<aside class="bank_details_section">
-			<!-- <h1><span contenteditable>Additional Notes</span></h1> -->
-			<address class="bank_details">
-				<h2>Bank Details</h2>
-				<p>AAI EKVIRA STATIONARY</p>
-				<p><span>Bank Name</span><span>: </span><span>UNION BANK</span></p>
-				<p><span>A/c.No</span><span>: </span><span>538201010050429</span></p>
-				<p><span>IFSC Code</span><span>: </span><span>UBIN0553824</span></p>
-			</address>
-			<div class="signature_section">
-				<img src="/assets/img/sign.jpeg" alt="AAI EKAVIRA STATIONARY">
-				<p>Authorised Signature</p>
-			</div>
-		</aside>
         <footer>
 			<p>System generated invoice</p> 
 		</footer>
