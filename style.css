@@ -115,7 +115,7 @@ body {
 /* header */
 
 header {
-  margin: 0 0 3em;
+  margin: 0 0 1em;
 }
 header:after {
   clear: both;
@@ -166,6 +166,25 @@ header h1 {
   display: inline-block;
   width: 100px;
 }
+
+.declaration_block{
+  padding: 0 8px;
+  width: 40%;
+  margin-bottom: 12px;
+}
+
+.declaration_block h4{
+  border-bottom: 1px solid #000000;
+  margin-bottom: 10px;
+  padding-bottom: 2px;
+  width: fit-content;
+  font-size: 18px;
+}
+
+.declaration_block p{
+  font-size: 14px
+}
+
 header input {
   cursor: pointer;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -364,6 +383,8 @@ aside.bank_details_section{
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  padding: 8px;
+  border-top: 1px solid #000000;
 }
 aside.bank_details_section .signature_section{
   text-align: center;
@@ -388,8 +409,8 @@ aside address.bank_details h2{
 }
 
 aside address.bank_details p{
-  margin: 0 0 0.25em;
-  font-size: 16px;
+  margin: 0 0 0.1em;
+  font-size: 14px;
 }
 
 aside address.bank_details p span:first-child{
@@ -397,7 +418,7 @@ aside address.bank_details p span:first-child{
   width: 100px;
 }
 aside address.bank_details p span{
-  font-size: 16px;
+  font-size: 14px;
 }
 
 footer{
