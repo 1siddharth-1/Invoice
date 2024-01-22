@@ -505,3 +505,27 @@ tr:hover .cut {
 @page {
   margin: 0;
 }
+
+
+.print_btn_wrap{
+  margin-top: 32px;
+  text-align: center;
+}
+
+.print_btn_wrap .print_btn{
+  width: 94px;
+  height: 42px;
+  background: grey;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+@media print {
+  body, html {
+      width: 100%;
+  }
+}

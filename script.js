@@ -291,4 +291,9 @@ function onContentLoad() {
 	}
 }
 
+let print_btn = document.querySelector('.print_btn');
+print_btn.addEventListener('click', function(){
+	window.print();
+});
+
 window.addEventListener && document.addEventListener('DOMContentLoaded', onContentLoad);
