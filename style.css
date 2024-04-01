@@ -102,13 +102,39 @@ body {
   width: 8.5in;
   overflow-x: hidden;
 }
+/* body {
+  background: #fff;
+  border-radius: 1px;
+  box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+} */
+
 body {
   background: #fff;
   border-radius: 1px;
   box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  height: auto;
+  margin: 0 auto;
+  overflow-y: visible;
+  padding: 0.5in;
+  width: 100%;
 }
 
-.main_container{
+@media print {
+  /* Adjust margins for printed output */
+  body {
+    padding: 0.25in; /* Adjust padding for printed output */
+  }
+
+  /* Hide unnecessary elements for printing */
+  .no-print {
+    display: none;
+  }
+
+  /* Adjust font size and other styles for printed output */
+  /* Add additional print-specific styles as needed */
+}
+.main_container {
   border: 1px solid #000000;
 }
 
@@ -131,7 +157,7 @@ header h1 {
   padding: 0.5em 0;
 }
 
-.address_wrap{
+.address_wrap {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -139,7 +165,7 @@ header h1 {
   margin-bottom: 4px;
 }
 
-.address_wrap .address_container{
+.address_wrap .address_container {
   width: 60%;
   border-right: 1px solid #000000;
 }
@@ -156,24 +182,28 @@ header h1 {
   font-weight: 700;
   margin: 0 0 0.25em;
 }
-.address_wrap .address_container address.header_address_wrap p{
+.address_wrap .address_container address.header_address_wrap p {
   margin: 0 0 0.25em;
 }
-.address_wrap .address_container address.header_address_wrap p span{
-    font-size: 16px;
+.address_wrap .address_container address.header_address_wrap p span {
+  font-size: 16px;
 }
-.address_wrap .address_container address.header_address_wrap p span:first-child{
+.address_wrap
+  .address_container
+  address.header_address_wrap
+  p
+  span:first-child {
   display: inline-block;
   width: 100px;
 }
 
-.declaration_block{
+.declaration_block {
   padding: 0 8px;
   width: 40%;
   margin-bottom: 12px;
 }
 
-.declaration_block h4{
+.declaration_block h4 {
   border-bottom: 1px solid #000000;
   margin-bottom: 10px;
   padding-bottom: 2px;
@@ -181,8 +211,8 @@ header h1 {
   font-size: 18px;
 }
 
-.declaration_block p{
-  font-size: 14px
+.declaration_block p {
+  font-size: 14px;
 }
 
 header input {
@@ -201,7 +231,7 @@ header input {
 article,
 article address,
 table.inventory,
-table.final_table{
+table.final_table {
   margin: 0 0 3em;
   border-collapse: collapse;
 }
@@ -211,13 +241,13 @@ article:after {
   display: table;
 }
 article h1 {
-    border: none;
-    border-width: 0 0 1px;
-    margin: 0 0 1em;
+  border: none;
+  border-width: 0 0 1px;
+  margin: 0 0 1em;
 }
 article h1 {
-    border-color: #999;
-    border-bottom-style: solid;
+  border-color: #999;
+  border-bottom-style: solid;
 }
 
 article address {
@@ -225,27 +255,27 @@ article address {
   line-height: 1.25;
 }
 
-.address_wrap address.buyer_detail{
+.address_wrap address.buyer_detail {
   padding: 8px;
 }
 
-.address_wrap address.buyer_detail h2{
+.address_wrap address.buyer_detail h2 {
   font-size: 18px;
   font-weight: 700;
   margin: 0 0 0.25em;
 }
-.address_wrap address.buyer_detail h2 span:first-child{
+.address_wrap address.buyer_detail h2 span:first-child {
   display: inline-block;
   width: 100px;
 }
-.address_wrap address.buyer_detail p span:first-child{
+.address_wrap address.buyer_detail p span:first-child {
   display: inline-block;
   width: 100px;
 }
-.address_wrap address.buyer_detail p{
+.address_wrap address.buyer_detail p {
   margin: 0 0 0.25em;
 }
-.address_wrap address.buyer_detail p span{
+.address_wrap address.buyer_detail p span {
   font-size: 16px;
 }
 
@@ -263,7 +293,7 @@ table.balance:after {
 
 /* table meta */
 
-table.meta{
+table.meta {
   width: 40%;
 }
 
@@ -294,28 +324,31 @@ table.meta tr:last-child td {
 
 /* table items */
 
-table.inventory, table.final_table {
+table.inventory,
+table.final_table {
   clear: both;
   width: 100%;
-  border-bottom:solid #000 !important;
-  border-top:solid #000 !important;
-  border-width:1px 0 0 1px !important;
+  border-bottom: solid #000 !important;
+  border-top: solid #000 !important;
+  border-width: 1px 0 0 1px !important;
 }
-table.inventory th, table.final_table th {
+table.inventory th,
+table.final_table th {
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
   border-radius: 0;
   position: unset;
-  border:solid #000 !important;
-  border-width:0 1px 1px 0 !important;
+  border: solid #000 !important;
+  border-width: 0 1px 1px 0 !important;
 }
-table.inventory td , table.final_table td {
+table.inventory td,
+table.final_table td {
   text-align: right;
   vertical-align: middle;
   border-radius: 0;
-  border:solid #000 !important;
-  border-width:0 1px 1px 0 !important;
+  border: solid #000 !important;
+  border-width: 0 1px 1px 0 !important;
 }
 table.inventory td:nth-child(1) {
   width: 2%;
@@ -353,7 +386,8 @@ table.inventory td:nth-child(9) {
   text-align: right;
   width: 8.28%;
 }
-table.inventory .total_body td span, table.final_table .total_body td span{
+table.inventory .total_body td span,
+table.final_table .total_body td span {
   font-weight: 600;
 }
 
@@ -378,7 +412,7 @@ aside h1 {
   border-color: #999;
   border-bottom-style: solid;
 }
-aside.bank_details_section{
+aside.bank_details_section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -386,48 +420,48 @@ aside.bank_details_section{
   padding: 8px;
   border-top: 1px solid #000000;
 }
-aside.bank_details_section .signature_section{
+aside.bank_details_section .signature_section {
   text-align: center;
 }
-aside.bank_details_section .signature_section img{
+aside.bank_details_section .signature_section img {
   width: 90px;
   height: 90px;
   margin-bottom: 4px;
 }
-aside.bank_details_section .signature_section p{
+aside.bank_details_section .signature_section p {
   font-size: 16px;
   font-weight: 500;
 }
 
-aside address.bank_details{
+aside address.bank_details {
   line-height: 1.25;
 }
-aside address.bank_details h2{
+aside address.bank_details h2 {
   font-size: 18px;
   font-weight: 700;
   margin: 0 0 0.25em;
 }
 
-aside address.bank_details p{
+aside address.bank_details p {
   margin: 0 0 0.1em;
   font-size: 14px;
 }
 
-aside address.bank_details p span:first-child{
+aside address.bank_details p span:first-child {
   display: inline-block;
   width: 100px;
 }
-aside address.bank_details p span{
+aside address.bank_details p span {
   font-size: 14px;
 }
 
-footer{
+footer {
   padding-top: 12px;
   border-top: 1px solid #dfdfdf;
   margin-top: 50px;
 }
 
-footer p{
+footer p {
   text-align: center;
   font-size: 12px;
 }
@@ -506,13 +540,12 @@ tr:hover .cut {
   margin: 0;
 }
 
-
-.print_btn_wrap{
+.print_btn_wrap {
   margin-top: 32px;
   text-align: center;
 }
 
-.print_btn_wrap .print_btn{
+.print_btn_wrap .print_btn {
   width: 94px;
   height: 42px;
   background: grey;
@@ -525,7 +558,8 @@ tr:hover .cut {
 }
 
 @media print {
-  body, html {
-      width: 100%;
+  body,
+  html {
+    width: 100%;
   }
 }
